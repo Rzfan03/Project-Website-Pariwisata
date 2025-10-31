@@ -6,17 +6,17 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="./src/css/global.css">
 
     <title>Around World</title>
 </head>
-<body>
+<body class="">
 
 <!-- ini navbar -->
-<nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+<nav class="border-gray-200 z-10 shadow-lg sticky top-0 dark:bg-gray-100 dark:border-gray-950">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="" class="h-8" alt="Logo Web" />
-        <span id="title-nav" class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Around World</span>
+        <span id="title-nav" class="self-center text-4xl font-semibold whitespace-nowrap dark:text-black">Around World</span>
     </a>
     <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -25,40 +25,18 @@
         </svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul id="zalando" class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-950 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-gray-100 dark:bg-gray-100 md:dark:bg-gray-100 dark:border-gray-100">
         <li>
-          <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+          <a href="#" class="block py-2 px-3 text-gray-950 bg-white rounded-sm md:bg-transparent md:text-gray-950 md:p-0 md:dark:text-gray-950 font-bold dark:bg-white md:dark:bg-transparent" aria-current="page">Home</a>
         </li>
         <li>
-            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-  </svg></button>
-            <!-- Dropdown menu -->
-            <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                  </li>
-                </ul>
-                <div class="py-1">
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
-                </div>
-            </div>
+          <a href="#preview" class="block py-2 px-3 text-gray-950 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0 dark:text-gray-950 md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-gray-500 md:dark:hover:bg-transparent">Services</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0 dark:text-gray-950 md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-gray-500 md:dark:hover:bg-transparent">Pricing</a>
         </li>
         <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-500 md:p-0 dark:text-gray-950 md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-gray-500 md:dark:hover:bg-transparent">Contact</a>
         </li>
       </ul>
     </div>
@@ -67,13 +45,22 @@
 <!-- end navbar -->
 
 
+<!-- bg-video -->
+ <div id="bg-video" class="h-screen w-full flex justify-center items-center">
+    <div id="bg-color-vid" class="h-screen w-screen"></div>
+    <video class="w-screen" autoplay muted loop id="myVideo">
+  <source src="./video/ForBiggerEscapes.mp4" type="video/mp4">
+</video>
+ </div>
+<!-- end bg video -->
+
+
+
 <!-- ini jumbotron -->
-
-
-<section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+<section class="bg-center bg-no-repeat bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">hidup jokowi, mangan ke pelu singan</h1>
-        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">sate ku mangann...</p>
+        <h1 id="title-tron" class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Travel   Discover  Adventure</h1>
+        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Travel is easier.</p>
         <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-950 rounded-lg bg-white hover:bg-gray-200 focus:ring-4 focus:ring-blue-300">
                 Get started
@@ -87,10 +74,138 @@
         </div>
     </div>
 </section>
-
-
 <!-- akhir jumbotron -->
 
+
+<!-- list sponsor -->
+ <div id="sponsor-list" class="relative flex flex-col justify-center items-center w-full bg-white py-8">
+
+  <!-- title -->
+  <div class="flex justify-center items-center mb-6">
+    <p id="zalando" class="text-gray-900 text-lg tracking-wide">Our Sponsors</p>
+  </div>
+
+  <!-- Fade gradient kiri dan kanan -->
+  <div class="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-white via-white/90 to-transparent z-10"></div>
+  <div class="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-white via-white/90 to-transparent z-10"></div>
+
+  <!-- marquee -->
+  <marquee behavior="scroll" direction="left" scrollamount="5" class="w-full">
+    <ul class="flex items-center space-x-10">
+      <li>
+        <img class="h-10 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/2560px-Booking.com_logo.svg.png" alt="Amazon logo">
+      </li>
+      <li>
+        <img class="h-10 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Expedia_Logo_2023.svg" alt="Microsoft logo">
+      </li>
+      <li>
+        <img class="h-10 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix logo">
+      </li>
+      <li>
+        <img class="h-10 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google.png" alt="Google logo">
+      </li>
+      <li>
+        <img class="h-23 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Logo_Traveloka.png/640px-Logo_Traveloka.png" alt="Spotify logo">
+      </li>
+      <li>
+        <img class="h-10 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Logo_BUMN_Untuk_Indonesia_2020.svg/640px-Logo_BUMN_Untuk_Indonesia_2020.svg.png" alt="Intel logo">
+      </li>
+      <li>
+        <img class="h-14 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Pertamina_Logo.svg/1200px-Pertamina_Logo.svg.png?20170806041723" alt="Samsung logo">
+      </li>
+    </ul>
+  </marquee>
+</div>
+
+
+
+
+ <section id="form-account" class="flex mt-8 p-5 flex-col justify-center items-center">
+  <h1 id="title-nav" class="text-4xl text-gray-950 mt-5">A Community for luxury travel</h1>
+  <p class="text-center mt-8">AroundWorld is the trusted community for modern luxury travellers.<br> Find inspiration, book unique journeys, and connect with like-minded members.</p>
+  <button id="title-nav" class="bg-gray-950 p-3 mt-5 rounded-full text-white">Make Free Account</button>
+  </section>
+
+  <section id="preview" class="flex mt-50 p-5 justify-between items-center">
+    <div class="p-5 ml-5 text-gray-950">
+      <h1 id="title-nav" class="text-4xl mb-5">Travel in style, with exclusive VIP benefits</h1>
+      <div class="line">
+        <p>test</p>
+      </div>
+      <p>Indulge in luxury with our curated collection of the world’s<br> best hotels and enjoy exclusive VIP benefits.</p>
+    </div>
+    <div>
+      <img class="rounded ml-5 p-5" src="https://imgs.search.brave.com/GCzET-pO6f8IYTdTnMggysZoGqiQMjPgIKFH5q2udjY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdW5l/ZHVjYXRpb25ncm91/cC5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjMvMDYvYWxh/aW4tYm9ubmFyZGVh/dXgtWF93WDh5RTVC/eU0tdW5zcGxhc2gt/MTAyNHg2ODQuanBn" alt="">
+    </div>
+  </section>
+  
+  <section class="flex mt-20 p-5 justify-between items-center">
+    <div>
+      <img class="rounded ml-5 p-5" src="https://imgs.search.brave.com/kXrr33n3LgVCBY3V3KZFEFAx5NZC4xe0OzdlPtb6AOw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaWdp/dGFsLWJ1Y2tldC5w/cm9kLmJmaS5jby5p/ZC9hc3NldHMvQmxv/Zy9CbG9nJTIwTmV3/L1RlbXBhdCUyMHdp/c2F0YS9UZW1wYXQl/MjB3aXNhdGElMjBk/aSUyMEluZG9uZXNp/YSUyMEtvbW9kby5q/cGc" alt="">
+    </div>
+    <div class="p-5 ml-5">
+      <h1 id="title-nav" class="text-4xl mb-5">Discover new inspiration for your next journey</h1>
+      <div class="line">
+        <p>test</p>
+      </div>
+      <p>Whether it's beautiful destinations or thrilling experiences, <br>ignite your wanderlust and discover new reasons to travel and explore.</p>
+    </div>
+  </section>
+
+  <section class="flex mt-20 p-5 justify-between items-center">
+    <div class="p-5 ml-5">
+      <h1 id="title-nav" class="text-4xl mb-5">Discover new inspiration for your next journey</h1>
+      <div class="line">
+        <p>test</p>
+      </div>
+      <p>Whether it's beautiful destinations or thrilling experiences, <br>ignite your wanderlust and discover new reasons to travel and explore.</p>
+    </div>
+    <div>
+      <img class="rounded ml-5 p-5" src="https://imgs.search.brave.com/kXrr33n3LgVCBY3V3KZFEFAx5NZC4xe0OzdlPtb6AOw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaWdp/dGFsLWJ1Y2tldC5w/cm9kLmJmaS5jby5p/ZC9hc3NldHMvQmxv/Zy9CbG9nJTIwTmV3/L1RlbXBhdCUyMHdp/c2F0YS9UZW1wYXQl/MjB3aXNhdGElMjBk/aSUyMEluZG9uZXNp/YSUyMEtvbW9kby5q/cGc" alt="">
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ <!-- ini footer -->
+  
+
+ <!-- akhir footer -->
 
     
 </body>
