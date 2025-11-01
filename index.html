@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./src/css/global.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./src/js/languange-toggle.js"></script>
+  
 
   <title>Around World</title>
 </head>
@@ -49,28 +51,23 @@
   </button>
   
   <!-- Dropdown menu -->
-  <div id="dropdownNavbar" class="z-10 absolute hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-100 top-full left-0 mt-2">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownNavbarLink">
+
+  <div id="dropdownNavbar" class="z-10 absolute hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 top-full left-0 mt-2">
+    <ul class="py-2 text-sm" aria-labelledby="dropdownNavbarLink">
       <li>
-        <a href="./src/pages/collection.html#special-offers" class="block px-4 py-2 hover:bg-orange-500 dark:hover:text-white relative text-white">
+        <a href="./src/pages/collection.html#special-offers" class="block px-4 py-2 hover:bg-orange-500 hover:text-white relative transition-colors duration-200 text-gray-950">
           Special Offer
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-250 ease-in-out hover:w-full"></span>
         </a>
       </li>
       <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white relative text-white">
+        <a href="./src/pages/collection.html#popular-hotels" class="block px-4 py-2 hover:bg-orange-500 hover:text-white relative transition-colors duration-200 text-gray-950">
           Popular Hotels
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-250 ease-in-out hover:w-full"></span>
         </a>
       </li>
-      <li>
-        <a href="./src/pages/events.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white relative text-white">
-          Event
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-250 ease-in-out hover:w-full"></span>
-        </a>
-      </li>
     </ul>
-  </div>
+</div>
 </li>
           <li>
             <a href="#partners-list" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent" aria-current="page"">Partners</a>
@@ -79,6 +76,7 @@
             <a href="#" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent"  aria-current="page">Contact</a>
           </li>
         </ul>
+        
       </div>
     </div>
   </nav>
@@ -96,17 +94,11 @@
   <!-- ini jumbotron -->
   <section id="home" class="h-screen bg-center bg-no-repeat bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-      <h1 id="title-tron" class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Travel Discover Adventure</h1>
-      <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Travel is easier.</p>
+      <h1 data-lang-key="dailyTravel" id="title-tron" class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Your Journey, Your Story</h1>
+      <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Craft your dream trip and create memories that will last a lifetime.</p>
       <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
         <a href="#sponsor-list" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-950 rounded-lg bg-white hover:bg-gray-200">
           Get started
-          <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-          </svg>
-        </a>
-        <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-          Learn more
         </a>
       </div>
     </div>
@@ -114,7 +106,7 @@
   <!-- akhir jumbotron -->
 
   <!-- list sponsor -->
-  <div id="sponsor-list" class="relative flex flex-col justify-center items-center w-full bg-white py-8">
+  <div id="sponsor-list" class="relative flex flex-col md:flex-auto justify-center  items-center w-full bg-white py-8">
 
     <!-- title -->
     <div class="flex justify-center items-center mb-6">
@@ -126,19 +118,19 @@
     <div class="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-white via-white/90 to-transparent z-10"></div>
 
     <!-- marquee -->
-    <marquee behavior="scroll" direction="left" scrollamount="5" class="w-full">
+       <marquee behavior="scroll" direction="left" scrollamount="5" class="w-full">
       <ul class="flex items-center space-x-10">
         <li>
-          <img class="h-25 object-contain" src="https://imgs.search.brave.com/XiThv5_C2NOhqOAfhlD1Sf6imb60ITi4-UERL4FCiE4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXhz/aS5pZC93ZWIvYXNz/ZXRzL2xvZ28tYmFy/dS1pbmRvc2F0LW9v/cmVkb28taHV0Y2hp/bnNvbi5EMmdTdGk1/Vl8yMmczNXMud2Vi/cA" alt="Amazon logo">
+          <img class="h-25 md:flex-1 object-contain" src="https://imgs.search.brave.com/XiThv5_C2NOhqOAfhlD1Sf6imb60ITi4-UERL4FCiE4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXhz/aS5pZC93ZWIvYXNz/ZXRzL2xvZ28tYmFy/dS1pbmRvc2F0LW9v/cmVkb28taHV0Y2hp/bnNvbi5EMmdTdGk1/Vl8yMmczNXMud2Vi/cA" alt="Amazon logo">
         </li>
         <li>
-          <img class="h-10 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/2560px-Booking.com_logo.svg.png" alt="Amazon logo">
+          <img class="h-10 md:flex-1 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/2560px-Booking.com_logo.svg.png" alt="Amazon logo">
         </li>
         <li>
-          <img class="h-10 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Expedia_Logo_2023.svg" alt="logo">
+          <img class="h-10 md:flex-1 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Expedia_Logo_2023.svg" alt="logo">
         </li>
         <li>
-          <img class="h-12 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Bluebird_Group_primary_logo.svg/2560px-Bluebird_Group_primary_logo.svg.png" alt="logo">
+          <img class="h-12 md:flex-1 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Bluebird_Group_primary_logo.svg/2560px-Bluebird_Group_primary_logo.svg.png" alt="logo">
         </li>
         <li>
           <img class="h-12 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tiket.com_logo.png/1200px-Tiket.com_logo.png" alt="logo">
@@ -282,48 +274,54 @@
     </div>
     </div>
     <div id="partners-list" class="flex justify-center items-center" data-aos="fade" data-aos-duration="1000">
-      <button class="bg-orange-500 rounded-full p-3 text-white mt-5 cursor-pointer hover:bg-transparent hover:text-orange-400 transition border border-orange-400">Read More --></button>
+      <button class="bg-orange-500 rounded-full p-3 text-white mt-5 cursor-pointer hover:bg-transparent hover:text-orange-400 transition border border-orange-400">Read More</button>
     </div>
   </section>
   <!-- end -->
 
-  <section class="p-5 mt-5 flex justify-center items-center flex-col">
+<section class="p-5 mt-5 flex justify-center items-center flex-col">
     <div class="flex flex-col justify-center items-center">
-      <h1 class="mt-5 mb-2 text-4xl playfair">Our Partners</h1>
+      <h1 class="mt-5 mb-2 text-4xl playfair md:text-3xl sm:text-2xl">Our Partners</h1>
       <div class="line">
         <p>test</p>
       </div>
-      <p class="text-center mt-2 mb-5">Our extensive partner network includes the most trusted names in travel,<br> allowing us to offer you exclusive VIP benefits and other bespoke perks to enhance your travel experience.</p>
-      <p class="playfair text-2xl mt-5 mb-2">Sponsorship</p>
+      <p class="text-center mt-2 mb-5 md:text-base sm:text-sm md:px-4 sm:px-2">Our extensive partner network includes the most trusted names in travel,<br> allowing us to offer you exclusive VIP benefits and other bespoke perks to enhance your travel experience.</p>
+      <p class="playfair text-2xl mt-5 mb-2 md:text-xl sm:text-lg">Sponsorship</p>
       <div class="line">
         <!-- <p>test</p> -->
       </div>
-      <div class="flex mt-5 items-center">
-        <img class="h-38 mr-8" src="https://imgs.search.brave.com/yj919gU9_L7ICD6fTwcPlOIIDe2X5fFyH4B2uEjIi7k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzQyLzIvaW5kb3Nh/dC1vb3JlZG9vLWh1/dGNoaXNvbi1sb2dv/LXBuZ19zZWVrbG9n/by00MjgzODMucG5n" alt="partners-list">
-        <img class="h-11 mr-8 " src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Logo_IM3.svg/768px-Logo_IM3.svg.png?20220408152949" alt="partners-list">
-        <img class="h-10 mr-5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Tiket.com_%282017%29.svg/1198px-Tiket.com_%282017%29.svg.png?20231007131017" alt="partners-list">
-        <img class="h-20 mr-5" src="https://imgs.search.brave.com/OKtq9LRR6fqi0pxFjGiTNZg_Zx5qoOOA0QPHQwqR6I0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGFjZG4uY29t/L2ltZzIvYnJhbmRp/bmcvaG90ZWxzL3Ry/aXBfbG9nb190cmlw/YWR2aXNvci5wbmc" alt="partners-list">
-        <img class="h-30 mr-5" src="https://imgs.search.brave.com/e765biHVF-FEApbs1EIsRHX8mIB4uUHpPRS-hzYuz_M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaXNi/dWRwYXIuYmF0YW0u/Z28uaWQvd3AtY29u/dGVudC91cGxvYWRz/L3NpdGVzLzIyLzIw/MjAvMDEvV29uZGVy/ZnVsLTEwMjR4NzI0/LnBuZw" alt="partners-list">
+      <div class="flex mt-5 items-center md:flex-wrap sm:flex-wrap md:justify-center sm:justify-center md:gap-4 sm:gap-2">
+        <img class="h-38 mr-8 md:h-32 sm:h-20 md:mr-4 sm:mr-2" src="https://imgs.search.brave.com/yj919gU9_L7ICD6fTwcPlOIIDe2X5fFyH4B2uEjIi7k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzQyLzIvaW5kb3Nh/dC1vb3JlZG9vLWh1/dGNoaXNvbi1sb2dv/LXBuZ19zZWVrbG9n/by00MjgzODMucG5n" alt="partners-list">
+        <img class="h-11 mr-8 md:h-9 sm:h-6 md:mr-4 sm:mr-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Logo_IM3.svg/768px-Logo_IM3.svg.png?20220408152949" alt="partners-list">
+        <img class="h-10 mr-5 md:h-8 sm:h-5 md:mr-4 sm:mr-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Tiket.com_%282017%29.svg/1198px-Tiket.com_%282017%29.svg.png?20231007131017" alt="partners-list">
+        <img class="h-20 mr-5 md:h-16 sm:h-10 md:mr-4 sm:mr-2" src="https://imgs.search.brave.com/OKtq9LRR6fqi0pxFjGiTNZg_Zx5qoOOA0QPHQwqR6I0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGFjZG4uY29t/L2ltZzIvYnJhbmRp/bmcvaG90ZWxzL3Ry/aXBfbG9nb190cmlw/YWR2aXNvci5wbmc" alt="partners-list">
+        <img class="h-30 mr-5 md:h-24 sm:h-16 md:mr-4 sm:mr-2" src="https://imgs.search.brave.com/e765biHVF-FEApbs1EIsRHX8mIB4uUHpPRS-hzYuz_M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaXNi/dWRwYXIuYmF0YW0u/Z28uaWQvd3AtY29u/dGVudC91cGxvYWRz/L3NpdGVzLzIyLzIw/MjAvMDEvV29uZGVy/ZnVsLTEwMjR4NzI0/LnBuZw" alt="partners-list">
       </div>
     </div>
     <div class="flex flex-col text-3xl mt-8 justify-center items-center">
       <div class="flex flex-col justify-center items-center">
-        <h1 class="text-2xl playfair mt-2 mb-2">Hotel Partners</h1>
+        <h1 class="text-2xl playfair mt-2 mb-2 md:text-xl sm:text-lg">Hotel Partners</h1>
         <div class="line">
           <p>test</p>
         </div>
-        <div class="flex justify-center items-center">
-          <img class="h-30 mr-5" src="https://cms-asset.ayana.com/ARB_2100x2100_b0401e886a.png" alt="partners-list">
-          <img class="h-30 mr-5" src="https://cdn.freebiesupply.com/logos/large/2x/bvlgari-hotels-resorts-logo-png-transparent.png" alt="partners-list">
-          <img class="h-20 mr-8 w-full" src="https://sultanjakarta.com/wp-content/uploads/2023/10/logo-color-new.png" alt="partners-list">
-          <img class="h-13 mr-5" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuoYtOVGihyphenhyphenklmimdjMNhSLR3dp7kAk-iBcuLEBRh9SuboWgjOi2B166lnpWWFWD3lSsTHQt7t5X5m9rIDEZO8eeDvfdnrcyk2ghVrnAahEgHfwtHgaqgR1_56rW9Epx1BW6wlPiAvsUfVvuUSMCXSh-erGD46XcAXPI1UOuZwvDsAoB0k1rFXfgsYSQ/s2410/Logo%20Fox%20Hotel.png" alt="partners-list">
-          <img class="h-20 mr-5 brightness-0" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Hotel_Indonesia_Kempinski_logo.svg/2440px-Hotel_Indonesia_Kempinski_logo.svg.png" alt="partners-list">
+        <!-- First Row - 3 items -->
+        <div class="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-4 md:gap-3 sm:gap-2 justify-center items-center w-full max-w-4xl mx-auto">
+          <img class="h-30 md:h-24 sm:h-16 justify-self-center" src="https://cms-asset.ayana.com/ARB_2100x2100_b0401e886a.png" alt="partners-list">
+          <img class="h-30 md:h-24 sm:h-16 justify-self-center" src="https://cdn.freebiesupply.com/logos/large/2x/bvlgari-hotels-resorts-logo-png-transparent.png" alt="partners-list">
+          <img class="h-20 md:h-16 sm:h-12 w-full justify-self-center" src="https://sultanjakarta.com/wp-content/uploads/2023/10/logo-color-new.png" alt="partners-list">
         </div>
-        <div class="flex justify-center items-center mt-5 mb-8">
-          <img class="h-16 mr-8" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Santika_Indonesia_Hotels_%26_Resorts_logo.svg/1200px-Santika_Indonesia_Hotels_%26_Resorts_logo.svg.png" alt="partners-list">
-          <img class="h-10 mr-8" src="https://d2ile4x3f22snf.cloudfront.net/wp-content/uploads/sites/191/2017/09/20030949/grandkemang-Jakarta-Logo-Transparant.png" alt="partners-list">
-          <img class="h-10 mr-8 brightness-0" src="https://sahidhotels.com/wp-content/uploads/2020/04/sahid-logo-white.png" alt="partners-list">
-          <img class="h-15 mr-8" src="https://upload.wikimedia.org/wikipedia/commons/0/01/Shakti_Hotel_Jakarta.png" alt="partners-list">
+        
+        <!-- Second Row - 3 items -->
+        <div class="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-4 md:gap-3 sm:gap-2 justify-center items-center w-full max-w-4xl mx-auto mt-4">
+          <img class="h-13 md:h-10 sm:h-8 justify-self-center" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuoYtOVGihyphenhyphenklmimdjMNhSLR3dp7kAk-iBcuLEBRh9SuboWgjOi2B166lnpWWFWD3lSsTHQt7t5X5m9rIDEZO8eeDvfdnrcyk2ghVrnAahEgHfwtHgaqgR1_56rW9Epx1BW6wlPiAvsUfVvuUSMCXSh-erGD46XcAXPI1UOuZwvDsAoB0k1rFXfgsYSQ/s2410/Logo%20Fox%20Hotel.png" alt="partners-list">
+          <img class="h-20 md:h-16 sm:h-12 brightness-0 justify-self-center" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Hotel_Indonesia_Kempinski_logo.svg/2440px-Hotel_Indonesia_Kempinski_logo.svg.png" alt="partners-list">
+          <img class="h-16 md:h-12 sm:h-10 justify-self-center" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/46/Santika_Indonesia_Hotels_%26_Resorts_logo.svg/1200px-Santika_Indonesia_Hotels_%26_Resorts_logo.svg.png" alt="partners-list">
+        </div>
+        
+        <!-- Third Row - 2 items -->
+        <div class="grid grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-4 md:gap-3 sm:gap-2 justify-center items-center w-full max-w-4xl mx-auto mt-4">
+          <img class="h-10 md:h-8 sm:h-6 justify-self-center" src="https://d2ile4x3f22snf.cloudfront.net/wp-content/uploads/sites/191/2017/09/20030949/grandkemang-Jakarta-Logo-Transparant.png" alt="partners-list">
+          <img class="h-10 md:h-8 sm:h-6 brightness-0 justify-self-center" src="https://sahidhotels.com/wp-content/uploads/2020/04/sahid-logo-white.png" alt="partners-list">
         </div>
       </div>
     </div>
@@ -341,13 +339,12 @@
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
-                  <h2 class="mb-6 text-sm font-semibold text-gray-200 uppercase dark:text-gray-500">Resources</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                        <a href="https://tailwindcss.com/" class="hover:underline">Contact us</a>
                       </li>
                       <li>
-                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                        <a href="https://flowbite.com/" class="hover:underline">FAQS</a>
                       </li>
                   </ul>
               </div>
@@ -355,10 +352,10 @@
                   <h2 class="mb-6 text-sm font-semibold text-gray-200 uppercase dark:text-gray-500">Follow us</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
                       <li class="mb-4">
-                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                          <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Twitter</a>
                       </li>
                       <li>
-                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                          <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Instagram</a>
                       </li>
                   </ul>
               </div>
