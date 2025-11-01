@@ -20,26 +20,49 @@ nav a {
   transition: 0.25s ease;
 }
 
-ul#zalando li a {
+/* Efek hover untuk menu utama */
+ul#zalando li a,
+ul#zalando li button {
   position: relative;
   text-decoration: none;
 }
 
-ul#zalando li a::after {
+ul#zalando li a::after,
+ul#zalando li button::after {
   transition: all 0.25s ease;
   content: '';
   position: absolute;
   width: 100%;
-  /* left: 50%; */
   bottom: 0;
   border-bottom: 2px solid orange;
   transform: scaleX(0);
   transform-origin: center;
 }
 
-ul#zalando li a:hover::after {
+ul#zalando li a:hover::after,
+ul#zalando li button:hover::after {
   transform: scaleX(1);
   transform-origin: center;
+}
+
+/* Efek hover untuk item dropdown */
+#dropdownNavbar a {
+  position: relative;
+  overflow: hidden;
+}
+
+#dropdownNavbar a .hover-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  transition: width 0.25s ease;
+}
+
+#dropdownNavbar a:hover .hover-line {
+  width: 100%;
 }
 
 #transition {

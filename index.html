@@ -40,9 +40,38 @@
           <li>
             <a href="#travel" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent" aria-current="page">Daily Travel</a>
           </li>
-          <li>
-            <a href="./src/pages/collection.html" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent" aria-current="page"">Collection</a>
-          </li>
+          <li class="relative">
+  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent relative">
+    Collections
+    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg>
+  </button>
+  
+  <!-- Dropdown menu -->
+  <div id="dropdownNavbar" class="z-10 absolute hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-100 top-full left-0 mt-2">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownNavbarLink">
+      <li>
+        <a href="./src/pages/collection.html#special-offers" class="block px-4 py-2 hover:bg-orange-500 dark:hover:text-white relative text-white">
+          Special Offer
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-250 ease-in-out hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white relative text-white">
+          Popular Hotels
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-250 ease-in-out hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white relative text-white">
+          Event
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-250 ease-in-out hover:w-full"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>
           <li>
             <a href="#partners-list" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent" aria-current="page"">Partners</a>
           </li>
