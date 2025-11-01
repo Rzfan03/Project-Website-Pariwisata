@@ -18,7 +18,7 @@
   <title>Around World</title>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
   <!-- ini navbar -->
   <nav id="navbarv" class="border-gray-200 z-50 fixed w-screen top-0 bg-gradient-to-b from-black/50 to-transparent">
@@ -38,10 +38,13 @@
             <a href="#" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent" aria-current="page">Home</a>
           </li>
           <li>
-            <a href="#travel" class="block py-2 px-3 text-gray-600 rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-950 md:p-0 dark:text-gray-950 md:dark:hover:text-gray-950 dark:hover:bg-gray-700 dark:hover:text-gray-950 md:dark:hover:bg-transparent">Daily Travel</a>
+            <a href="#travel" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent" aria-current="page">Daily Travel</a>
           </li>
           <li>
-            <a href="#partners-list" class="block py-2 px-3 text-gray-600 rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-950 md:p-0 dark:text-gray-950 md:dark:hover:text-gray-950 dark:hover:bg-gray-700 dark:hover:text-gray-950 md:dark:hover:bg-transparent">Partners</a>
+            <a href="./src/pages/collection.html" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent" aria-current="page"">Collection</a>
+          </li>
+          <li>
+            <a href="#partners-list" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent" aria-current="page"">Partners</a>
           </li>
           <li>
             <a href="#" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent">Contact</a>
@@ -53,16 +56,16 @@
   <!-- end navbar -->
 
   <!-- bg-video -->
-  <div id="bg-video" class="h-screen w-full relative flex justify-center items-center">
-    <div id="bg-color-vid" class="h-screen w-screen"></div>
-    <video class="w-screen absolute top-0 -z-1" autoplay muted loop id="myVideo">
+  <div id="bg-video" class="min-h-screen min-w-screen w-full relative flex justify-center items-center">
+    <div id="bg-color-vid" class="h-full w-full"></div>
+    <video class="min-h-full min-w-full absolute top-0 -z-1" autoplay muted loop id="myVideo">
       <source src="./video/2249630-sd_960_540_30fps.mp4" type="video/mp4">
     </video>
   </div>
   <!-- end bg video -->
 
   <!-- ini jumbotron -->
-  <section id="home" class="bg-center bg-no-repeat bg-blend-multiply">
+  <section id="home" class="h-screen bg-center bg-no-repeat bg-blend-multiply">
     <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
       <h1 id="title-tron" class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Travel Discover Adventure</h1>
       <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Travel is easier.</p>
