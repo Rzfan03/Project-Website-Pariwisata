@@ -3,90 +3,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
-    scroll-behavior: smooth;
+* {
+  scroll-behavior: smooth;
+  transition: all 0.2s ease-in-out;
 }
 
-body{
-     font-family: "Inter", sans-serif;
+body {
+  font-family: "Inter", sans-serif;
 }
 
 
-nav a{
-    transition: 0.25s ease;
+nav a {
+  transition: 0.25s ease;
 }
 
-ul#zalando li a{
-    position: relative;
-    text-decoration: none;
+ul#zalando li a {
+  position: relative;
+  text-decoration: none;
 }
 
 ul#zalando li a::after {
-    transition: all 0.25s ease;
-    content: '';
-    position: absolute;
-    width: 100%;
-    /* left: 50%; */
-    bottom: 0;
-    border-bottom: 2px solid orange;
-    transform: scaleX(0) ;
-    transform-origin: center;
+  transition: all 0.25s ease;
+  content: '';
+  position: absolute;
+  width: 100%;
+  /* left: 50%; */
+  bottom: 0;
+  border-bottom: 2px solid orange;
+  transform: scaleX(0);
+  transform-origin: center;
 }
 
 ul#zalando li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: center;
+  transform: scaleX(1);
+  transform-origin: center;
 }
 
-#transition{
-    transition: 0.25s ease;
+#transition {
+  transition: 0.25s ease;
 }
 
-.a-white{
-    color: white;
+.a-white {
+  color: white;
 }
-.playfair{
-     font-family: "Playfair Display", serif;
+
+.playfair {
+  font-family: "Playfair Display", serif;
 
 }
 
-.transition{
-    transition: 0.25s ease;
+.transition {
+  transition: 0.25s ease;
 }
 
-#title-nav{
-    font-family: "Playfair Display", serif;
+#title-nav {
+  font-family: "Playfair Display", serif;
 }
 
-#zalando{
-     font-family: "Zalando Sans SemiExpanded", sans-serif;
+#zalando {
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
 }
 
-#title-tron{
-    font-family: "Cormorant", sans-serif;
+#title-tron {
+  font-family: "Cormorant", sans-serif;
 }
 
-#bg-video{
-    position: absolute;
-    z-index: -1;
+#bg-video {
+  position: absolute;
+  z-index: -1;
 }
 
-#bg-color-vid{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.515);
-    height: 100vh;
-    width: 
-    100%;
+#bg-color-vid {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.515);
+  height: 100vh;
+  top: 0;
+  width: 100%;
 }
 
-#sponsor-list{
-    margin-top: 10px;
+#sponsor-list {
+  margin-top: 10px;
 }
 
-.line{
-    background-color: orange;
-    width: 200px;
-    height: 2px;
-    margin-bottom: 10px;
-    color: transparent;
+.line {
+  background-color: orange;
+  width: 200px;
+  height: 2px;
+  margin-bottom: 10px;
+  color: transparent;
 }
