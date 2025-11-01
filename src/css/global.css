@@ -16,6 +16,28 @@ nav a{
     transition: 0.25s ease;
 }
 
+ul#zalando li a{
+    position: relative;
+    text-decoration: none;
+}
+
+ul#zalando li a::after {
+    transition: all 0.25s ease;
+    content: '';
+    position: absolute;
+    width: 100%;
+    /* left: 50%; */
+    bottom: 0;
+    border-bottom: 2px solid orange;
+    transform: scaleX(0) ;
+    transform-origin: center;
+}
+
+ul#zalando li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
 #transition{
     transition: 0.25s ease;
 }
