@@ -27,7 +27,12 @@
   }
   
   /* Content Sections */
-  section.flex {
+  section.flex:nth-child(even) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  section.flex:nth-child(odd) {
     flex-direction: column;
     text-align: center;
   }
@@ -57,6 +62,10 @@
   .flex.justify-center.items-center img {
     margin: 0.5rem;
     max-height: 40px;
+  }
+
+  div.line {
+    margin: 1rem auto;
   }
 }
 
@@ -95,7 +104,7 @@
   }
   
   section.flex {
-    padding: 1rem;
+    /* padding: 1rem; */
   }
   
   section.flex img {
@@ -321,7 +330,7 @@ ul#zalando li button:hover::after {
 }
 
 #sponsor-list {
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .line {

@@ -35,7 +35,7 @@
         </svg>
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
-        <ul id="zalando" class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-100">
+        <ul id="zalando" class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black/60 md:bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-100">
           <li>
             <a href="#" class="block py-2 px-3 text-white rounded-sm after:hidden md:after:!block pb-0 md:pb-[3px] md:border-0 md:hover:text-gray-950 md:p-0 md:dark:hover:text-gray-950 dark:hover:text-gray-950 md:dark:hover:bg-transparent" aria-current="page">Home</a>
           </li>
@@ -85,7 +85,7 @@
   <!-- bg-video -->
   <div id="bg-video" class="min-h-screen min-w-screen w-full relative flex justify-center items-center">
     <div id="bg-color-vid" class="h-full w-full"></div>
-    <video class="min-h-full min-w-full absolute top-0 -z-1" autoplay muted loop id="myVideo">
+    <video class="min-h-screen min-w-screen object-cover top-0 -z-1" autoplay muted loop id="myVideo">
       <source src="./src/video/2249630-sd_960_540_30fps.mp4" type="video/mp4">
     </video>
   </div>
@@ -93,7 +93,7 @@
 
   <!-- ini jumbotron -->
   <section id="home" class="h-screen bg-center bg-no-repeat bg-blend-multiply">
-    <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+    <div class="px-6 md:px-4 mx-auto max-w-screen-xl flex-col text-center justify-center items-center h-full flex">
       <h1 data-lang-key="dailyTravel" id="title-tron" class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">Your Journey, Your Story</h1>
       <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Craft your dream trip and create memories that will last a lifetime.</p>
       <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
@@ -106,7 +106,7 @@
   <!-- akhir jumbotron -->
 
   <!-- list sponsor -->
-  <div id="sponsor-list" class="relative flex flex-col md:flex-auto justify-center  items-center w-full bg-white py-8">
+  <div id="sponsor-list" class="relative justify-center items-center w-full bg-white py-8">
 
     <!-- title -->
     <div class="flex justify-center items-center mb-6">
@@ -114,12 +114,12 @@
     </div>
 
     <!-- Fade gradient kiri dan kanan -->
-    <div class="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-white via-white/90 to-transparent z-10"></div>
-    <div class="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-white via-white/90 to-transparent z-10"></div>
+    <div class="pointer-events-none !absolute left-0 top-0 h-full min-w-32 bg-gradient-to-r from-white from-30% to-transparent z-10"></div>
+    <div class="pointer-events-none !absolute right-0 top-0 h-full min-w-32 bg-gradient-to-l from-white via-white/90 to-transparent z-10"></div>
 
     <!-- marquee -->
-       <marquee behavior="scroll" direction="left" scrollamount="5" class="w-full">
-      <ul class="flex items-center space-x-10">
+       <marquee behavior="scroll" direction="left" scrollamount="5" class="-z-10">
+      <ul class="flex flex-row flex-nowrap items-center space-x-10 w-max">
         <li>
           <img class="h-25 md:flex-1 object-contain" src="https://imgs.search.brave.com/XiThv5_C2NOhqOAfhlD1Sf6imb60ITi4-UERL4FCiE4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tYXhz/aS5pZC93ZWIvYXNz/ZXRzL2xvZ28tYmFy/dS1pbmRvc2F0LW9v/cmVkb28taHV0Y2hp/bnNvbi5EMmdTdGk1/Vl8yMmczNXMud2Vi/cA" alt="Amazon logo">
         </li>
@@ -149,14 +149,14 @@
   </div>
 
   <!-- info section -->
-  <section id="info-section" data-aos="fade-up" data-aos-duration="1000" class="flex mt-8 p-5 flex-col justify-center items-center">
+  <section id="info-section" data-aos="fade-up" data-aos-duration="1000" class="flex px-5 flex-col justify-center items-center">
     <h1 id="title-nav" class="text-4xl text-gray-950 mt-5">A Community for luxury travel</h1>
     <p class="text-center mt-8">AroundWorld is the trusted community for modern luxury travellers.<br> Find inspiration, book unique journeys, and connect with like-minded members.</p>
   </section>
   <!-- end info section -->
 
   <!-- idk what is this -->
-  <section class="flex mt-50 p-5 justify-between items-center">
+  <section class="flex mt-8 p-5 justify-between items-center">
     <div class="p-5 mr-5 text-gray-950">
       <h1 id="title-nav" class="text-4xl mb-5">Travel in style, with exclusive VIP benefits</h1>
       <div class="line">
@@ -165,13 +165,13 @@
       <p>Indulge in luxury with our curated collection of the world's<br> best hotels and enjoy exclusive VIP benefits.</p>
     </div>
     <div>
-      <img class="rounded mr-5 p-5"  data-aos="fade" data-aos-duration="1000" src="https://imgs.search.brave.com/GCzET-pO6f8IYTdTnMggysZoGqiQMjPgIKFH5q2udjY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdW5l/ZHVjYXRpb25ncm91/cC5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjMvMDYvYWxh/aW4tYm9ubmFyZGVh/dXgtWF93WDh5RTVC/eU0tdW5zcGxhc2gt/MTAyNHg2ODQuanBn" alt="">
+      <img class="rounded md:mr-5"  data-aos="fade" data-aos-duration="1000" src="https://imgs.search.brave.com/GCzET-pO6f8IYTdTnMggysZoGqiQMjPgIKFH5q2udjY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdW5l/ZHVjYXRpb25ncm91/cC5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjMvMDYvYWxh/aW4tYm9ubmFyZGVh/dXgtWF93WDh5RTVC/eU0tdW5zcGxhc2gt/MTAyNHg2ODQuanBn" alt="">
     </div>
   </section>
 
-  <section class="flex mt-20 p-5 justify-between items-center">
+  <section class="flex mt-8 p-5 justify-between items-center">
     <div>
-      <img class="rounded ml-5 p-5" data-aos="fade" data-aos-duration="1000" src="https://imgs.search.brave.com/kXrr33n3LgVCBY3V3KZFEFAx5NZC4xe0OzdlPtb6AOw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaWdp/dGFsLWJ1Y2tldC5w/cm9kLmJmaS5jby5p/ZC9hc3NldHMvQmxv/Zy9CbG9nJTIwTmV3/L1RlbXBhdCUyMHdp/c2F0YS9UZW1wYXQl/MjB3aXNhdGElMjBk/aSUyMEluZG9uZXNp/YSUyMEtvbW9kby5q/cGc" alt="">
+      <img class="rounded md:ml-5" data-aos="fade" data-aos-duration="1000" src="https://imgs.search.brave.com/kXrr33n3LgVCBY3V3KZFEFAx5NZC4xe0OzdlPtb6AOw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kaWdp/dGFsLWJ1Y2tldC5w/cm9kLmJmaS5jby5p/ZC9hc3NldHMvQmxv/Zy9CbG9nJTIwTmV3/L1RlbXBhdCUyMHdp/c2F0YS9UZW1wYXQl/MjB3aXNhdGElMjBk/aSUyMEluZG9uZXNp/YSUyMEtvbW9kby5q/cGc" alt="">
     </div>
     <div class="p-5 ml-5">
       <h1 id="title-nav" class="text-4xl mb-5">Discover new inspiration for your next journey</h1>
@@ -184,7 +184,7 @@
   <!-- end -->
 
   <!-- idk what is this p-2 -->
-  <section class="flex mt-20 p-5 justify-between items-center">
+  <section class="flex mt-8 p-5 justify-between items-center">
     <div class="p-5 mr-5">
       <h1 id="title-nav" class="text-4xl mb-5">Discover new inspiration for your next journey</h1>
       <div class="line">
@@ -193,7 +193,7 @@
       <p>Whether it's beautiful destinations or thrilling experiences, <br>ignite your wanderlust and discover new reasons to travel and explore.</p>
     </div>
     <div>
-      <img class="rounded mr-5 p-5" data-aos="fade" data-aos-duration="1000" src="https://imgs.search.brave.com/0L9Lvv0mNh2Q2TOwwkMHg_oeGAXKcqcQjAsj2BuVeG0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMyLnRyaXBvdG8u/Y29tL21lZGlhL2Zp/bHRlci9ubC9pbWcv/MzA3MjU4L1RyaXBE/b2N1bWVudC8xNTkw/OTMyNjE4X2RzY18y/NjQzLmpwZw" alt="">
+      <img class="rounded md:mr-5" data-aos="fade" data-aos-duration="1000" src="https://imgs.search.brave.com/0L9Lvv0mNh2Q2TOwwkMHg_oeGAXKcqcQjAsj2BuVeG0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMyLnRyaXBvdG8u/Y29tL21lZGlhL2Zp/bHRlci9ubC9pbWcv/MzA3MjU4L1RyaXBE/b2N1bWVudC8xNTkw/OTMyNjE4X2RzY18y/NjQzLmpwZw" alt="">
     </div>
   </section>
   <!-- end -->
@@ -334,7 +334,7 @@
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
               <a href="https://flowbite.com/" class="flex items-center">
-                  <span class="self-center playfair text-3xl font-semibold whitespace-nowrap dark:text-gray-950">AroundWorld</span>
+                  <span class="self-center playfair text-3xl font-semibold whitespace-nowrap max-md:mx-auto dark:text-gray-950">AroundWorld</span>
               </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -373,10 +373,10 @@
           </div>
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-200 lg:my-8" />
-      <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="https://flowbite.com/" class="hover:underline">AroundWorld™</a>. All Rights Reserved.
+      <div class="flex max-md:items-center justify-between">
+          <span class="text-sm text-gray-500 max-md:text-center w-full dark:text-gray-400">© 2025 <a href="https://flowbite.com/" class="hover:underline">AroundWorld™</a>. All Rights Reserved.
           </span>
-          <div class="flex mt-4 sm:justify-center sm:mt-0">
+          <div class="hidden md:flex mt-4 sm:justify-center sm:mt-0">
               <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                   <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
                         <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
