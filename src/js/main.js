@@ -19,8 +19,12 @@ $(window).scroll(function() {
     $('#navbarv').addClass('bg-gradient-to-b from-black/50 to-transparent');
     
     $('#zalando').addClass('bg-black/60');
-    $('#zalando li a').addClass('text-white');
-    $('#zalando li a').removeClass('text-gray-700');
+
+    $('#zalando>li>a').addClass('text-white');
+    $('#zalando>li>a').removeClass('text-gray-700');
+
+    $('#dropdownNavbar a').removeClass('text-white');
+
     $('#title-nav').addClass('text-white');
     
     $('#dropdownNavbarLink').addClass('text-white');
