@@ -321,5 +321,12 @@
 </body>
 <script>
   AOS.init();
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('#logo-nav').attr('src', './src/img/Logo-AW-black.png');
+    } else {
+      $('#logo-nav').attr('src', './src/img/Logo-AW.png');
+    }
+  });
 </script>
 </html>
