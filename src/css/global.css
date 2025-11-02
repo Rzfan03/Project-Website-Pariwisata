@@ -213,6 +213,11 @@
   }
 }
 
+
+.text-sm-2{
+  font-size: 10px;
+}
+
 @media (max-height: 500px) and (orientation: landscape) {
   #home {
     min-height: 100vh;
